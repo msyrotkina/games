@@ -12,6 +12,8 @@
         let player = ruffle.createPlayer();
         let container = document.getElementById("container");
         container.appendChild(player);
+        player.style.width = "1800px";  // Ширина контейнера
+        player.style.height = "1600px"; // Висота контейнера
         player.load("1.swf");
     });
 </script>
