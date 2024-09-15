@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flash Game</title>
+    <title>Flash Game with Ruffle</title>
+    <script src="ruffle/ruffle.js"></script>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("DOMContentLoaded", () => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("flash-container");
+            player.load("Kill-a-letter.swf");
+            container.appendChild(player);
+        });
+    </script>
 </head>
 <body>
-    <h1>Flash Game</h1>
-    <object width="800" height="600">
-        <param name="movie" value="game.swf">
-        <embed src="Kill-a-letter.swf" width="800" height="600">
-        </embed>
-    </object>
+    <h1>Flash Game with Ruffle</h1>
+    <div id="flash-container"></div>
 </body>
 </html>
