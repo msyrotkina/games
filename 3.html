@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Game</title>
+    <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+
+    window.addEventListener("DOMContentLoaded", () => {
+        let ruffle = window.RufflePlayer.newest();
+        let player = ruffle.createPlayer();
+        let container = document.getElementById("container");
+        container.appendChild(player);
+        player.style.width = "640px"; 
+        player.style.height = "480px";
+        player.load("3.swf");
+    });
+</script>
+<script src="ruffle/ruffle.js"></script>
+</head>
+<body>
+    <h1>Game 1</h1>
+    <a href ="https://msyrotkina.github.io/games/#">game1</a><br><a href ="https://msyrotkina.github.io/games/2">game2</a>
+    <div id="container"></div>
+</body>
+</html>
