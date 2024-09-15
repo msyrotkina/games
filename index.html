@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flash Game with Ruffle</title>
-    <script src="ruffle/ruffle.js"></script>
-    <script>
-        window.RufflePlayer = window.RufflePlayer || {};
-        window.addEventListener("DOMContentLoaded", () => {
-            const ruffle = window.RufflePlayer.newest();
-            const player = ruffle.createPlayer();
-            const container = document.getElementById("flash-container");
-            player.load("Kill-a-letter.swf");
-            container.appendChild(player);
-        });
-    </script>
+   <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+
+    window.addEventListener("DOMContentLoaded", () => {
+        let ruffle = window.RufflePlayer.newest();
+        let player = ruffle.createPlayer();
+        let container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("Kill-a-letter.swf");
+    });
+</script>
+<script src="path/to/ruffle/ruffle.js"></script>
 </head>
 <body>
     <h1>Flash Game with Ruffle</h1>
